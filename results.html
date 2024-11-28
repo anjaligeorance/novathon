@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Results</title>
+</head>
+<body>
+    <h1>Grading Results</h1>
+    <p><strong>Extracted Text:</strong> {{ extracted_text }}</p>
+    <h2>Scores:</h2>
+    <ul>
+        {% for result in results %}
+        <li>
+            <strong>Question:</strong> {{ result.question }} <br>
+            <strong>Score:</strong> {{ result.score }}% <br>
+            <strong>Feedback:</strong> {{ result.feedback }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
